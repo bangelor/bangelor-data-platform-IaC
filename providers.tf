@@ -2,9 +2,9 @@ terraform {
   required_version = ">=1.0"
 
   backend "azurerm" {
-    resource_group_name  = var.resource_group_name_backend
-    storage_account_name = var.storage_account_name_backend
-    container_name       = var.container_name_backend
+    resource_group_name  = "lbn-terraform-backend"
+    storage_account_name = "lbnterraformbackend"
+    container_name       = "tfstatedev"
     key                  = "terraform.tfstate"
   }
 

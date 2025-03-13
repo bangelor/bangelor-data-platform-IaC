@@ -33,12 +33,7 @@ variable "resource_group_name_backend" {
   description = "The resource group backend"
 }
 
-variable "storage_account_name_backend" {
+variable "keyvault_name_backend" {
   type        = string
-  description = "The storage account backend"
-}
-
-variable "container_name_backend" {
-  type        = string
-  description = "The container name backend"
+  description = "The keyvault name backend"
 }

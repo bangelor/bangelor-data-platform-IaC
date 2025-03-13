@@ -1,3 +1,8 @@
+data "azurerm_key_vault" "existing" {
+  name                = var.keyvault_name_backend
+  resource_group_name = var.resource_group_name_backend
+}
+
 # Generate random resource group name
 resource "random_pet" "rg_name" {
   prefix = var.resource_group_name_prefix
