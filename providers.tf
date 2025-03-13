@@ -1,14 +1,6 @@
 terraform {
   required_version = ">=1.0"
 
-  backend "azurerm" {
-    resource_group_name  = "lbn-terraform-backend"
-    storage_account_name = "lbnterraformbackend" 
-    container_name       = "tfstatedev"
-    key                  = "terraform.tfstate"
-    subscription_id = "a33284d9-663f-4d5a-941c-bcb428c75973"
-  }
-
   required_providers {
     azapi = {
       source  = "azure/azapi"
@@ -26,6 +18,12 @@ terraform {
       source  = "hashicorp/time"
       version = "0.9.1"
     }
+  }
+  backend "azurerm" {
+    resource_group_name  = "lbn-terraform-backend"
+    storage_account_name = "lbnterraformbackend" 
+    container_name       = "tfstatedev"
+    key                  = "terraform.tfstate"
   }
 }
 
