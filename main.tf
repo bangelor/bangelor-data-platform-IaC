@@ -53,6 +53,7 @@ resource "azurerm_kubernetes_cluster" "k8s" {
 
 resource "random_pet" "azurerm_container_registry" {
   prefix = "azcoreg"
+  separator = ""
 }
 
 resource "azurerm_container_registry" "azcoreg" {
