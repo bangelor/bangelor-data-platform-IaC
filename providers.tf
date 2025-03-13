@@ -20,6 +20,7 @@ terraform {
     }
   }
   backend "azurerm" {
+    subscription_id = "a33284d9-663f-4d5a-941c-bcb428c75973"
     resource_group_name  = "lbn-terraform-backend"
     storage_account_name = "lbnterraformbackend" 
     container_name       = "tfstatedev"
